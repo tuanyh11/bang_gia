@@ -1,0 +1,157 @@
+
+
+@use './asset/index.scss' as *;
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;  
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 62.5%;
+    background-color: $bg-color-2;
+    font-family: Roboto, Helvetica, Arial, sans-serif;
+    overflow: hidden;
+}
+
+
+a {
+    text-decoration: none;
+    color: #eee;
+}
+
+button {
+    outline: none;
+    background:#FFF;
+    cursor: pointer;
+}
+
+input {
+    border: none;
+    outline: none;
+    padding: 10px;
+}
+
+button {
+    outline: none;
+}
+
+.headingPage {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px 0;
+    & h2 {
+        color: $text-color-1;
+        font-size: 1.2rem;
+        
+        font-weight: 500;
+    }
+}
+
+
+.home {
+    text-align: center;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.productact {
+    display: flex;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: capitalize;
+}
+
+.midlePage {
+    margin: 20px 0;
+}
+
+.group {
+    margin-bottom: 10px;
+    & span {
+        font-size: 0.8rem;
+        color: $text-color-1;
+        text-transform: capitalize;
+    }
+
+
+}
+
+.error {
+    margin-top: 10px;
+    color: rgb(234, 6, 6);
+    font-size: 0.8rem;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+.login {
+    width: 400px; 
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+
+}
+
+
+.wrapButton {
+    margin: 10px 0;
+    & button {
+        padding: 10px 20px ;
+    }
+}
+
+
+.overlay {
+    position: fixed;
+    width: 100%; 
+    height: 100%; 
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.5); 
+    z-index: 99; 
+    cursor: pointer; 
+}
+
+.ringContainer {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    & .ring {
+        animation: spinner 1s infinite linear;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        border: 5px solid $orange;
+        border-right: 5px solid transparent;
+        border-left: 5px solid transparent;
+    }
+}
+
+@keyframes spinner  {
+    to {
+        transform: rotate(360deg)
+    }
+}

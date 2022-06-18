@@ -1,0 +1,29 @@
+@use '../../asset' as *;
+
+.comfirmButton {
+   position: relative;
+   z-index: 1;
+    height: 100vh;
+   background: rgba(1,1,1,0.1);
+   & .comfirmContent {
+    border-radius: 6px;
+    box-shadow: $box-shadow;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 10px;
+    background: white;
+    z-index: 99;
+    & h2 {
+        padding: 10px;
+        color: $bg-color-1;
+    }
+
+    & .comfirmBox {
+        padding: 10px 0;
+        display: flex;
+        justify-content: space-around;
+    }
+   }
+}

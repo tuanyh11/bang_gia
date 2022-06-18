@@ -1,0 +1,39 @@
+@use '../../asset' as *;
+
+.header {
+    height: 80px;
+    background: $bg-color-1;
+    box-shadow: $box-shadow;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    display: none;
+    @include mobile{
+        display: flex;
+    }
+    & .sibartime {
+        display:   none;
+    }
+    @include mobile {
+        & .sibartime {
+            display: block;
+            position: relative;
+            & i {
+                position: absolute;
+                z-index: 999;
+                right: 50%;
+                top: 50%;
+                color: white;
+                font-size: 20px;
+                transform: translate(-200%, -50%);
+                transition: all 0.3 ease-in-out;
+            }
+
+            & .fa-xmark {
+                color: $bg-color-2;
+                font-size: 25px;
+            }
+        }
+    }
+   
+}

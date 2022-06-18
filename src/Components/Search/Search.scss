@@ -1,0 +1,37 @@
+@use '../../asset/' as *;
+
+.search {
+    display: inline-block;
+    & form {
+        padding:  20px 20px;
+        background: $bg-color-1;
+        border-radius: 6px;
+        box-shadow: $box-shadow;
+        position: relative;
+        z-index: 1;
+    }
+    & input {
+        background: transparent;
+        color: $text-color-1;
+        border-bottom: 1px solid $orange;
+        padding: 10px 0 10px 0;
+        width: 100%;
+    } 
+
+    & input.errorInput {
+        border-bottom: 1px solid $error-message;
+    }
+
+    
+}
+
+.searchButton {
+    font-size: 1rem;
+    color: $orange;
+    transform: translate(-50%, -50%);
+    background: transparent;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    right: 10px;
+}

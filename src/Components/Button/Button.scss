@@ -1,0 +1,14 @@
+@use '../../asset/' as *;
+
+.button {
+    display: block;
+    padding: 8px;
+    background: $orange;
+    border-radius: 6px;
+    font-size: 0.8rem;
+    color: $text-color-1;
+}
+
+.button:hover {
+    background: #efa73f;
+}

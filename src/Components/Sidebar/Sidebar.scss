@@ -1,0 +1,72 @@
+@use '../../asset/' as *;
+.sidebarContent {
+    height: 100vh;
+    padding: 10px;
+    // background: $bg-color-1;
+    // box-shadow: $box-shadow;
+    
+    & .sibartime {
+        display: none;
+    }
+
+    @include mobile {
+            position: fixed;
+            left: 0;
+            top: 0; 
+            bottom: 0;
+            right: 0;
+            padding: 0;
+            background: white;
+
+            transform: translateX(-100%);
+            transition: all 0.3s ease-in;
+            // transform: translateX(0)
+            z-index: 999;
+    }
+
+    & .sideBarTitle {
+        text-align: center;
+        padding: 10px 0;
+        color: $orange;
+        font-size: 1.2rem;
+    }
+
+    & .sidebarCart {
+        position: relative;
+        padding: 10px;
+        background: $bg-color-1;
+        box-shadow: $box-shadow;
+        margin: 10px 0;
+        border-radius: 5px;
+        display: block;
+        transition: all 0.3s ease-in;
+
+        & i {
+            font-size: 1rem;
+            color: $orange;
+            margin-right: 10px;
+        }
+
+        & span {
+            font-size: 1rem;
+            color: $text-color-1;
+            text-transform: capitalize;
+        }
+    }
+
+     & .sidebarCart:hover {
+        background: $orange;
+
+        & i{
+            color: $text-color-1;
+        }
+    }
+
+    & .sidebarCart.active {
+        background: $orange;
+
+        & i{
+            color: $text-color-1;
+        }
+    }
+}

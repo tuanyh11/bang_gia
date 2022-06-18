@@ -1,0 +1,66 @@
+@use '../../asset' as *;
+
+.cart {
+    background: $bg-color-1;
+    padding: 1rem;
+    transition: transform 0.2s linear;
+    border-radius: 6px;
+    cursor: pointer;
+    box-shadow: $box-shadow;
+
+        & .cartTitle {
+            display: flex;
+            align-items: center;
+            color: $orange;
+            margin: 5px 0;
+            & span {
+                font-size: 1rem;
+                margin-right: 0.5rem;
+                color: $text-color-1;
+            }  
+        }
+
+        & .action {
+            position: relative;
+            float: right;
+            z-index: 1;
+            & i {
+                font-size: 1rem;
+                color: $text-color-1;
+            }
+
+            & .boxAction {
+                padding: 10px;
+                position: absolute;
+                background-color: #fff;
+                top: 0;
+                left: 0;
+                transform: translateX(-70%);
+                z-index: 999;
+                border-radius: 6px;
+                display: none;
+                box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+                & button {
+                    padding: 10px;
+                }
+
+                & button:hover {
+                    color: $orange;
+                }
+            }
+
+            .boxAction.active {
+                display: block;
+            }
+        }
+
+        // & :hover  + .boxAction  {
+        //     display: block;
+        // }
+        
+
+}
+
+.cart:hover {
+    transform: scale(1.01);
+}
