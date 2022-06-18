@@ -139,7 +139,7 @@ const Users = () => {
       return (
         <div>
             <div className="headingPage">
-              <h2>UsersPage</h2>
+              <h2>người quản lý</h2>
               <Button to="/createuser" title='Thêm người dùng'/>
             </div>
             {

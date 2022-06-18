@@ -5,7 +5,6 @@ import { Product } from '../../interface'
 import {Link} from 'react-router-dom'
 import {Button, ComfirmButton } from '../../Components'
 import {Search} from '../../Components/'
-import './Product.scss'
 import api from '../../axios'
 
 const Products = () => {
@@ -153,7 +152,7 @@ const Products = () => {
       return (
         <div>
             <div className="headingPage">
-              <h2>ProductsPage</h2>
+              <h2>sản phẩm</h2>
               <Button to="/createproduct" title='Thêm sản phẩm'/>
             </div>
             {

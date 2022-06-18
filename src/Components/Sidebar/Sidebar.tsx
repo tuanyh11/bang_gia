@@ -12,22 +12,22 @@ interface Feture {
 
 const fetuture:Feture[] = [
   {
-    feture: "product",
+    feture: "sản phẩm",
     icon: "fa-brands fa-product-hunt",
     route: "/product"
   }, 
   {
-    feture: "users",
+    feture: "người dùng",
     icon: "fa-solid fa-user-plus",
     route: "/users"
   }, 
   {
-    feture: "login",
+    feture: "đăng nhập",
     icon: "fa-solid fa-arrow-right-to-bracket",
     route: "/login"
   }, 
   {
-    feture: "logout",
+    feture: "đăng xuất",
     icon: "fa-solid fa-right-from-bracket",
     route: "/logout"
   }
@@ -59,8 +59,8 @@ const Sidebar = () => {
           {
             fetuture.map((item, index) => {
               return (
-                  item.feture === 'login' && state.user ? null 
-                  : item.feture === 'logout' && !state.user ? null : (
+                  item.route === '/login' && state.user ? null 
+                  : item.route === '/logout' && !state.user ? null : (
                     <Link to={item.route} className={`sidebarCart ${activeItem === index ? 'active' : ''}`} key={index} onClick={removeActive}>
                       <i className={item.icon}></i>
                       <span>{item.feture}</span>
